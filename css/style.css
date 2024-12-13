@@ -42,10 +42,6 @@ ul {
   list-style: none;
 }
 
-li a:hover {
-  color: var(--secondary-color);
-}
-
 /* i {
   font-size: 10px; 
 } */
@@ -71,7 +67,12 @@ h1 {
   gap: 10px;
 }
 
-.navbar a i {
+.navbar .navbar-menu .menus a:hover {
+  color: #ffe492;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar .menus a i {
   font-size: 10px;
 }
 
@@ -114,6 +115,7 @@ h1 {
 .hero {
   background: url("../images/hero-background.png") #043873 no-repeat center;
   background-size: contain;
+  /* background-position-y: 400px 0; */
 }
 
 .hero .container {
@@ -143,8 +145,16 @@ h1 {
   z-index: -1;
 }
 
-.management .card-desc h1 {
+.management .management-project .card-desc h1 {
+  padding: 10px 0;
   font-size: 72px;
+  background: url("../images/work-management-element.png") bottom right
+    no-repeat;
+}
+.management .management-work .card-desc h1 {
+  font-size: 72px;
+  background: url("../images/work-management-element-2.png") bottom center
+    no-repeat;
 }
 
 .management .management-project img {
@@ -184,6 +194,9 @@ h1 {
 .extension .card-desc h1 {
   font-size: 72px;
   line-height: 87.14px;
+  background: url("../images/extension-element.png") no-repeat;
+  background-position-x: 240px;
+  background-position-y: 65px;
 }
 
 .extension img {
@@ -199,6 +212,7 @@ h1 {
 
 .extension .card-desc {
   width: 697px;
+  /* overflow: visible; */
 }
 
 .extension .card-desc h1,
@@ -211,6 +225,12 @@ h1 {
   padding: 140px 0;
   display: flex;
   gap: 98px;
+}
+
+.customise .card-desc {
+  background: url("../images/customise-element.png") no-repeat;
+  background-position-y: 115px;
+  /* background-position-x: -10px; */
 }
 
 /* Pricing Plan */
@@ -231,6 +251,8 @@ h1 {
   flex-direction: column;
   gap: 24px;
   text-align: center;
+  background: url("../images/price-element.png") no-repeat;
+  background-position: 480px 60px;
 }
 
 .plan .heading p {
@@ -253,8 +275,35 @@ h1 {
   border: solid 1px var(--secondary-color);
   border-radius: 10px;
   padding: 40px 44px;
+  justify-content: center;
 }
 
+.plan-card:hover {
+  background-color: #043873;
+  height: 761px;
+  transition: 0.3s ease-in-out;
+  gap: 30px;
+}
+
+.plan-card:hover h3,
+.plan-card:hover p,
+.plan-card:hover ul li {
+  color: #fff;
+}
+
+.plan-card:hover h2 {
+  color: var(--secondary-color);
+}
+
+.plan-card:hover ul li img {
+  content: url("../images/price-check-active.png");
+}
+
+.plan-card:hover a {
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+}
 .plan h2 {
   font-size: 36px;
   font-weight: 700;
@@ -306,6 +355,11 @@ h1 {
   background: #043873;
 }
 
+.your-work .your-work-heading {
+  background: url("../images/your-work-element.png") no-repeat right;
+  background-position-y: 65px;
+}
+
 .your-work img {
   position: absolute;
   top: 5050px;
@@ -342,6 +396,11 @@ h1 {
   padding: 140px 0;
 }
 
+.your-data .card-desc {
+  background: url("../images/your-data-element.png") no-repeat;
+  background-position: 200px 65px;
+}
+
 /* Sponsors */
 .sponsors .container {
   display: flex;
@@ -349,6 +408,8 @@ h1 {
   align-items: center;
   gap: 100px;
   padding: 140px 0;
+  background: url("../images/sponsors-element.png") no-repeat;
+  background-position: 665px 200px;
 }
 
 .sponsors .container .sponsors-container {
@@ -390,6 +451,8 @@ h1 {
   gap: 60px;
   padding: 140px 0;
   align-items: center;
+  background: url("../images/testimonial-element.png") no-repeat;
+  background-position: 920px 200px;
 }
 
 .testimonial-container {
@@ -401,7 +464,7 @@ h1 {
   flex-direction: column;
   gap: 32px;
   padding-bottom: 40px;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid; */
 }
 .testimonial .testimonial-container .card .comment img {
   width: 86px;
@@ -423,7 +486,7 @@ h1 {
   font-size: 24px;
   font-weight: 600;
   line-height: 36px;
-  color: #043873;
+  /* color: #043873; */
 }
 
 .testimonial .testimonial-container .profile .profile-info p:last-child {
@@ -486,6 +549,26 @@ h1 {
 /* Footer */
 .foot {
   background-color: #043873;
+}
+
+.foot .footer-info ul li a:hover,
+.foot .footer-buttons ul li a:hover,
+.foot .footer-buttons i:hover {
+  color: var(--secondary-color);
+}
+
+.foot .footer-buttons ul li a i:last-child {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.foot .footer-buttons ul li a i:first-child {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.foot .footer-buttons ul li a:hover i {
+  color: var(--secondary-color);
 }
 
 .foot a,
@@ -571,6 +654,29 @@ h1 {
   background-color: var(--primary-color);
   height: 498px;
 }
+.card .comment {
+  border-bottom: 1px solid #fff;
+}
+
+.card:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 100px 5px #c7c7c7;
+  transition: 0.2s ease-in-out;
+}
+.card .profile .profile-info p:first-child {
+  color: #043873;
+}
+.card:hover .comment img {
+  content: url("../images/quote-active.png");
+}
+.card:hover .comment p,
+.card:hover .profile .profile-info p {
+  color: #212529;
+}
+
+.card:hover .comment {
+  border-bottom: 1px solid #212529;
+}
 
 .card-desc h1 {
   color: #000;
@@ -628,9 +734,26 @@ h1 {
   color: #fff;
 }
 
+.btn i {
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.btn-primary:hover {
+  color: #043873;
+  background-color: var(--secondary-color);
+  transition: 0.5s ease-in-out;
+}
+
 .btn-secondary {
   color: #043873;
   background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }
 
 .btn-ghost {
