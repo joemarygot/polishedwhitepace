@@ -378,12 +378,16 @@ h1 {
   flex-direction: column;
   gap: 24px;
   width: 1128px;
+  align-items: center;
 }
 
 .your-work .your-work-container h1,
 .your-work .your-work-container p {
   text-align: center;
   color: #fff;
+}
+.your-work .your-work-container p {
+  width: 1050px;
 }
 
 .your-work .your-work-container a {
